@@ -1,22 +1,24 @@
 # BSC Wallet Generator
 
-Este projeto é um gerador de carteiras na Binance Smart Chain (BSC) que permite criar múltiplas carteiras, fornecendo as seguintes informações para cada uma:
+Este projeto é um **gerador de carteiras** para a **Binance Smart Chain (BSC)**. Ele permite a criação de múltiplas carteiras, fornecendo as seguintes informações para cada uma:
 
-- ID da carteira (`wallet_id`)
-- Chave privada (`private_key`)
-- Endereço público (`public_address`)
-- Frase-semente (`seed_phrase`)
-- Timestamp da criação
-- Número do bloco mais recente da rede BSC
-- URL do nó RPC utilizado para conectar à BSC
+- **ID da carteira** (`wallet_id`)
+- **Chave privada** (`private_key`)
+- **Endereço público** (`public_address`)
+- **Frase-semente** (`seed_phrase`)
+- **Timestamp** da criação
+- **Número do bloco mais recente** da rede BSC
+- **URL do nó RPC** utilizado para conectar à BSC
 
 ---
 
 ## **Funcionalidades**
 
 1. **Geração de Carteiras:** Criação de carteiras com chaves privadas, endereços públicos e frases-semente únicas.
-2. **Conexão à Binance Smart Chain:** Conexão a nós RPC da Binance Smart Chain para obter o bloco mais recente.
-3. **Log das Informações:** Armazena todas as informações importantes em um JSON para fácil consulta.
+2. **Conexão à Binance Smart Chain:** Conexão a nós RPC da Binance Smart Chain para obter o número do bloco mais recente.
+3. **Armazenamento seguro das informações:** Todas as informações geradas são armazenadas de maneira estruturada em um arquivo JSON.
+4. **Resiliência em conexões RPC:** A ferramenta tenta se conectar a múltiplos nós RPC configurados no arquivo `.env` para garantir maior estabilidade e confiabilidade.
+5. **Personalização da criação de carteiras:** Permite ao usuário escolher o número de palavras para a frase-semente (12, 15, 18, 21 ou 24 palavras).
 
 ---
 
@@ -24,13 +26,15 @@ Este projeto é um gerador de carteiras na Binance Smart Chain (BSC) que permite
 
 Antes de começar, certifique-se de ter os seguintes itens instalados:
 
-- Python 3.12 ou superior
+- **Python 3.12** ou superior
 - Um ambiente virtual Python configurado (opcional, mas recomendado)
 
-Além disso, você precisará instalar as seguintes bibliotecas Python:
+Além disso, você precisará instalar as seguintes dependências:
 
 - `python-dotenv`: Para carregar variáveis de ambiente do arquivo `.env`
-- `web3`: Para interagir com a blockchain Binance Smart Chain
+- `web3`: Para interagir com a Binance Smart Chain
+- `mnemonic`: Para gerar a frase-semente
+- `eth-account`: Para criação e gerenciamento de contas Ethereum
 
 ---
 
@@ -43,7 +47,8 @@ Siga os passos abaixo para configurar e executar o projeto:
    ```bash
    git clone <URL_DO_REPOSITORIO>
    cd BSC-Wallet
-   ```
+   
+  ```
 
 2. **Crie e ative um ambiente virtual (opcional):**
 
@@ -115,15 +120,16 @@ A saída gerada pelo script será semelhante ao exemplo abaixo:
 ```json
 [
     {
-        "wallet_id": -3853587926159170389,
-        "private_key": "e4052a17f63c3d6337e9475b76df3d72c75becdfc898f7106935313559933150",
-        "public_address": "0x96f40175a457eBcCccc2504B2C7AF96e50964949",
-        "seed_phrase": "guitar design galaxy language train drift token ribbon super language chest stone",
+        "wallet_id": "0000000000000000000000000000",
+        "private_key": "0000000000000000000000000000000000000000000000",
+        "public_address": "0000000000000000000000000000000000000000000",
+        "seed_phrase": "brasileiro manguaceiro pinga brasielira cerveja beba com moderação caboco mineiro comedor queijo",
         "timestamp": "2025-01-05 14:53:51",
         "block_number": 45502553,
         "node_url": "https://bsc-dataseed2.binance.org/"
     }
 ]
+
 ```
 
 - **`wallet_id`**: Um identificador único para a carteira gerada.
