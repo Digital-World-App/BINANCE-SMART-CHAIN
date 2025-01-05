@@ -1,0 +1,22 @@
+# Ignorar arquivos de dependências e ambiente virtual
+env/
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignorar o arquivo de dados das carteiras (potencialmente sensível)
+
+
+# Ignorar arquivos temporários e logs
+*.log
+*.tmp
+*.bak
+
+# Ignorar arquivos do editor de texto
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Ignorar cache de pacotes Python
+pip-wheel-metadata/

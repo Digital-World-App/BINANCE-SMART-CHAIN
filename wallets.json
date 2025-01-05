@@ -1,0 +1,14 @@
+{
+    "comment": "Este arquivo contém dados de carteiras geradas, incluindo informações como chaves privadas, endereços públicos e frases-semente. Nunca compartilhe esses dados. Mantenha-os em um local seguro.",
+    "wallets": [
+        {
+            "wallet_id": "-0000000000000000000000000000",
+            "private_key": "0000000000000000000000000000000000000000000000",
+            "public_address": "0000000000000000000000000000000000000000000",
+            "seed_phrase": "brasileiro manguaceiro pinga brasileira cerveja beba com moderação caboco mineiro comedor queijo",
+            "timestamp": "2025-01-05 14:53:51",
+            "block_number": 45502553,
+            "node_url": "https://bsc-dataseed2.binance.org/"
+        }
+    ]
+}
