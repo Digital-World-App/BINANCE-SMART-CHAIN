@@ -1,0 +1,26 @@
+.
+├── API
+│   ├── 0x.py
+│   ├── bsc.py
+│   ├── coingecko.py
+│   ├── coinmarketcap.py
+│   ├── dexscreener.py
+│   ├── pancakeswap.py
+│   └── tradingstrategy.py
+├── arvore-do-codigo.txt
+├── Inspetor Smart Contract
+│   ├── bep20_contract.abi
+│   └── bep20_contract_analysis.py
+├── Pool
+│   ├── liquidity_pool_bsc.abi
+│   └── pool.py
+├── README.md
+├── requirements.txt
+├── Smart Contract
+│   └── transection.py
+└── Wallet
+    ├── create_wallet.py
+    ├── README.md
+    └── wallets.json
+
+5 directories, 18 files
